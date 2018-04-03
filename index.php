@@ -15,4 +15,3 @@
     $resultado = $client->call('CONSULTA_MUNICIPIO_CP', $param);
     print_r($resultado);
 ?>
-?>
