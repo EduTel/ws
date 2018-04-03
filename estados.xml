@@ -1,0 +1,29 @@
+<estados>
+    <pais name='mexico'> 
+        <estado>Aguascalientes</estado>
+        <estado>BajaCalifornia</estado>
+        <estado>BajaCaliforniaSur</estado>
+        <estado>Campeche</estado>
+        <estado>Chiapas</estado>
+        <estado>Chihuahua</estado>
+        <estado>Coahuila</estado>
+        <estado>Colima</estado>
+        <estado>DF</estado>
+        <estado>Durango</estado>
+        <estado>EdoMexico</estado>
+        <estado>Guanajuato</estado>
+        <estado>Guerrero</estado>
+        <estado>Hidalgo</estado>
+        <estado>Jalisco</estado>
+        <estado>Michoacan</estado>
+        <estado>Morelos</estado>
+        <estado>Nayarit</estado>
+        <estado>NuevoLeon</estado>
+        <estado>Oaxaca</estado>
+        <estado>Puebla</estado>
+        <estado>Puebla</estado>
+        <estado>Queretaro</estado>
+        <estado>QuintanaRoo</estado>
+        <estado>SanLuisPotosi</estado>
+    </pais>
+</estados>
