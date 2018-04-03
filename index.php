@@ -6,11 +6,6 @@
     $client = new nusoap_client($wsdl,'wsdl');
     //ELIMINIAMOS CACHE
     ini_set("soap.wsdl_cache_enabled", "0");
-    $estados= array('Aguascalientes','BajaCalifornia','BajaCaliforniaSur','Campeche','Chiapas',
-                    'Chihuahua','Coahuila','Colima','DF','Durango','EdoMexico',
-                    'Guanajuato','Guerrero','Hidalgo','Jalisco','Michoacan',
-                    'Morelos','Nayarit','NuevoLeon','Oaxaca','Puebla',
-                    'Puebla','Queretaro','QuintanaRoo','SanLuisPotosi');
     //GENERAMOS EL PARAMETRO DE ESTADO Y MUNICIPIO
     $params = array(
         "estado_cp" => $_GET['estado_cp'],
