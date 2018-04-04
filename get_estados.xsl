@@ -3,5 +3,6 @@
     <xsl:template match="/">
         <xsl:apply-templates />
     </xsl:template>
-    <xsl:template match="elemento"></xsl:template>
+    <xsl:template match="elemento">
+    </xsl:template>
 </xsl:stylesheet>
