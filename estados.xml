@@ -1,31 +1,166 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="get_estados.xsl"?>
 <estados>
     <pais name='mexico'> 
-        <estado>Aguascalientes</estado>
-        <estado>BajaCalifornia</estado>
-        <estado>BajaCaliforniaSur</estado>
-        <estado>Campeche</estado>
-        <estado>Chiapas</estado>
-        <estado>Chihuahua</estado>
-        <estado>Coahuila</estado>
-        <estado>Colima</estado>
-        <estado>DF</estado>
-        <estado>Durango</estado>
-        <estado>EdoMexico</estado>
-        <estado>Guanajuato</estado>
-        <estado>Guerrero</estado>
-        <estado>Hidalgo</estado>
-        <estado>Jalisco</estado>
-        <estado>Michoacan</estado>
-        <estado>Morelos</estado>
-        <estado>Nayarit</estado>
-        <estado>NuevoLeon</estado>
-        <estado>Oaxaca</estado>
-        <estado>Puebla</estado>
-        <estado>Puebla</estado>
-        <estado>Queretaro</estado>
-        <estado>QuintanaRoo</estado>
-        <estado>SanLuisPotosi</estado>
+        <estado>
+            <nombre>Aguascalientes</nombre>
+            <abreviatura>Ags</abreviatura>
+            <capilal>Aguascalientes</capilal>
+        </estado>
+        <estado>
+            <nombre>Baja California	</nombre>
+            <abreviatura>B. C.</abreviatura> 
+            <capilal>Mexicali</capilal>
+        </estado>
+        <estado>
+            <nombre>Baja California Sur	</nombre>
+            <abreviatura>B. C. S.</abreviatura>
+            <capilal>La Paz</capilal>
+        </estado>
+        <estado>
+            <nombre>Campeche</nombre>
+            <abreviatura>Camp.</abreviatura>
+            <capilal>San Francisco de Campeche</capilal>
+        </estado>
+        <estado>
+            <nombre>Chiapas</nombre>
+            <abreviatura>Chis.</abreviatura>
+            <capilal>Tuxtla Gutiérrez</capilal>
+        </estado>
+        <estado>
+            <nombre>Chihuahua</nombre>
+            <abreviatura>Chih.</abreviatura>
+            <capilal>Chihuahua</capilal>
+        </estado>
+        <estado>
+            <nombre>Ciudad de México</nombre>
+            <abreviatura>CDMX</abreviatura> 
+            <capilal></capilal>
+        </estado>
+        <estado>
+            <nombre>Coahuila de Zaragoza</nombre>
+            <abreviatura>Coah.</abreviatura>
+            <capilal>Saltillo</capilal>
+        </estado>
+        <estado>
+            <nombre>Colima</nombre>
+            <abreviatura>Col.</abreviatura>
+            <capilal>Colima</capilal>
+        </estado>
+        <estado>
+            <nombre>Durango</nombre>
+            <abreviatura>Dgo.</abreviatura>
+            <capilal>Victoria de Durango</capilal>
+        </estado>
+        <estado>
+            <nombre>Guanajuato</nombre>
+            <abreviatura>Gto.</abreviatura>
+            <capilal>Guanajuato</capilal>
+        </estado>
+        <estado>
+            <nombre>Guerrero</nombre>
+            <abreviatura>Gro.</abreviatura>
+            <capilal>Chilpancingo de los Bravo</capilal>
+        </estado>
+        <estado>
+            <nombre>Hidalgo</nombre>
+            <abreviatura>Hgo.</abreviatura>
+            <capilal>Pachuca de Soto</capilal>
+        </estado>
+        <estado>
+            <nombre>Jalisco</nombre>
+            <abreviatura>Jal.</abreviatura> 
+            <capilal>Guadalajara</capilal>
+        </estado>
+        <estado>
+            <nombre>México</nombre>
+            <abreviatura>Méx.</abreviatura>
+            <capilal>Toluca de Lerdo</capilal>
+        </estado>
+        <estado>
+            <nombre>Michoacán de Ocampo</nombre>
+            <abreviatura>Mich.</abreviatura>
+            <capilal>Morelia</capilal>
+        </estado>
+        <estado>
+            <nombre>Morelos</nombre>
+            <abreviatura>Mor.</abreviatura>
+            <capilal>Cuernavaca</capilal>
+        </estado>
+        <estado>
+            <nombre>Nayarit</nombre>
+            <abreviatura>Nay.</abreviatura>
+            <capilal>Tepic</capilal>
+        </estado>
+        <estado>
+            <nombre>Nuevo León</nombre>
+            <abreviatura>N. L.</abreviatura>
+            <capilal>Monterrey</capilal>
+        </estado>
+        <estado>
+            <nombre>Oaxaca</nombre>
+            <abreviatura>Oax.</abreviatura>
+            <capilal>Oaxaca de Juárez</capilal>
+        </estado>
+        <estado>
+            <nombre>Puebla</nombre>
+            <abreviatura>Pue.</abreviatura>
+            <capilal>Puebla de Zaragoza</capilal>
+        </estado>
+        <estado>
+            <nombre>Querétaro de Arteaga</nombre>
+            <abreviatura>Qro.</abreviatura>
+            <capilal>Santiago de Querétaro</capilal>
+        </estado>
+        <estado>
+            <nombre>Quintana Roo</nombre>
+            <abreviatura>Q. R.</abreviatura> 
+            <capilal>Chetumal</capilal>
+        </estado>
+        <estado>
+            <nombre>San Luis Potosí</nombre>
+            <abreviatura>S. L. P.</abreviatura>
+            <capilal>San Luis Potosí</capilal>
+        </estado>
+        <estado>
+            <nombre>Sinaloa</nombre>
+            <abreviatura>Sin.</abreviatura>
+            <capilal>Culiacán Rosales</capilal>
+        </estado>
+        <estado>
+            <nombre>Sonora</nombre>
+            <abreviatura>Son.</abreviatura>
+            <capilal>Hermosillo</capilal>
+        </estado>   
+        <estado>
+            <nombre>Tabasco</nombre>
+            <abreviatura>Tab.</abreviatura>
+            <capilal>Villahermosa</capilal>
+        </estado>   
+        <estado>
+            <nombre>Tamaulipas</nombre>
+            <abreviatura>Tamps.</abreviatura>
+            <capilal>Ciudad Victoria</capilal>
+        </estado>   
+        <estado>
+            <nombre>Tlaxcala</nombre>
+            <abreviatura>Tlax.</abreviatura>
+            <capilal>Tlaxcala de Xicohténcatl</capilal>
+        </estado>   
+        <estado>
+            <nombre>Veracruz de Ignacio de la Llave</nombre>
+            <abreviatura>Ver.</abreviatura>
+            <capilal>Xalapa-Enríquez</capilal>
+        </estado>   
+        <estado>
+            <nombre>Yucatán</nombre>
+            <abreviatura>Yuc.</abreviatura>
+            <capilal>Mérida</capilal>
+        </estado>   
+        <estado>
+            <nombre>Zacatecas</nombre>
+            <abreviatura>Zac</abreviatura>
+            <capilal>Zacatecas	</capilal>
+        </estado>        
     </pais>
 </estados>
