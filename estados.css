@@ -7,3 +7,8 @@ abreviatura {
 capilal {
     color: blueviolet;
 }
+nombre,
+abreviatura,
+capilal {
+    display: block;
+}
