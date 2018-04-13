@@ -12,3 +12,10 @@ abreviatura,
 capilal {
     display: block;
 }
+pais {
+    counter-reset: contador;
+}
+nombre:before {
+    content: counter(contador, upper-alpha) ": ";
+    counter-increment: contador;
+}
