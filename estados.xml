@@ -4,7 +4,7 @@
 <estados url="https://es.wikipedia.org/wiki/Organizaci%C3%B3n_territorial_de_M%C3%A9xico" xmlns="http://www.w3.org/1999/xhtml">
     <pais name='mexico'> 
         <estado id='1'>
-            <h1>Aguascalientes</h1>
+            <nombre>Aguascalientes</nombre>
             <abreviatura>Ags</abreviatura>
             <capilal>Aguascalientes</capilal>
         </estado>
