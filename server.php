@@ -50,7 +50,6 @@
                                                             )
                                     )
                                 );
-    
     $server->register(  
                     $metodos['get_estados'], // nombre del metodo o funcion
                     array(
