@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="get_estados.xsl"?>
 <?xml-stylesheet href="estados.css"?>
-<estados url="http://www.ticarte.com">
+<estados url="https://es.wikipedia.org/wiki/Organizaci%C3%B3n_territorial_de_M%C3%A9xico" xmlns="http://www.w3.org/1999/xhtml">
     <pais name='mexico'> 
         <estado id='1'>
-            <nombre>Aguascalientes</nombre>
+            <h1>Aguascalientes</h1>
             <abreviatura>Ags</abreviatura>
             <capilal>Aguascalientes</capilal>
         </estado>
