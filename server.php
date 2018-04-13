@@ -17,7 +17,13 @@
     //echo "</pre>";
     /***********************************WS************************************/
     $server = new nusoap_server();
-    $server->configureWSDL('Web servicie de Eduardo', 'urn:mi_ws1');
+    $metodos = array(
+        'get_estados'=>"metodo_get_estados"
+    );
+    $urn = array(
+        'url1'=>"mi_ws1"
+    );
+    $server->configureWSDL('Web servicie de Eduardo ', 'urn:'.$urn['url1']);
     // Parametros de entrada
     $server->wsdl->addComplexType(  'type_entrada_get_estados', 
                                     'complexType', 
@@ -44,16 +50,17 @@
                                                             )
                                     )
                                 );
+    
     $server->register(  
-                    'metodo_get_estados', // nombre del metodo o funcion
+                    $metodos['get_estados'], // nombre del metodo o funcion
                     array(
                             'type_entrada_get_estados' => 'tns:type_entrada_get_estados'
                     ), // parametros de entrada
                     array(
                             'return' => 'tns:type_get_estados'
                     ), // parametros de salida
-                    'urn:mi_ws1', // namespace
-                    'urn:hellowsdl2#calculo_edad', // soapaction debe ir asociado al nombre del metodo
+                    'urn:'.$urn['url1'], // namespace
+                    'urn:hellowsdl2#'.$metodos['get_estados'], // soapaction debe ir asociado al nombre del metodo
                     'rpc', // style
                     'encoded', // use
                     'Este método recibe el nombre del país del que quiera los estados' // documentation
