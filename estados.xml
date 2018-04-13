@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="get_estados.xsl"?>
+<?xml-stylesheet href="estados.css"?>
 <estados url="http://www.ticarte.com">
     <pais name='mexico'> 
         <estado id='1'>

@@ -6,7 +6,7 @@
         enconding: juego de caracteres de salida. Por defecto UTF-8.
         indent: indenta la salida de la transformación (yes o no).
     -->
-    <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes" />
+    <xsl:output method="html" version="4.0" encoding="UTF-8" indent="yes" />
     <!-- Plantilla all -->
     <!--
     <xsl:template match="/">
@@ -16,8 +16,21 @@
     </xsl:template>
     -->
     <xsl:template match="/estados/pais/estado">
-        <xsl:value-of select="nombre" />
+        <nombre>
+            <xsl:value-of select="nombre" />
+        </nombre>
     </xsl:template>
+    
+    <!--
+    <xsl:template match="/estados/pais/estado">
+        <xsl:apply-templates />
+    </xsl:template>
+    <xsl:template match="nombre">
+        <ul>
+            <xsl:apply-templates select="nombre"/>
+        </ul>
+    </xsl:template>
+    -->
     <!--
     <xsl:template match="/estados/pais/estado/nombre">
         <xsl:value-of select="." />
