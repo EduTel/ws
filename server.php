@@ -40,10 +40,10 @@
     $urn = array(
         'url1'=>"mi_ws1"
     );
-    $miURL    = 'urn:'.$urn['url1'];
+    $ns    = 'urn:'.$urn['url1'];
     $endpoint = 'http://127.0.0.1/ws/index.php';
-    $server->configureWSDL('Web servicie de Eduardo',$miURL);
-    $server->wsdl->schemaTargetNamespace = $miURL;
+    $server->configureWSDL('Web servicie de Eduardo',$ns);
+    $server->wsdl->schemaTargetNamespace = $ns;
     // Parametros de entrada
     /*
      $server->wsdl->addComplexType(  'type_entrada_get_estados', 
@@ -72,20 +72,6 @@
                                      )
                                  );
     */
-    function metodo_get_paises(){
-        $xml     = open_file("estados.xml");
-        $paises  = get_xmlt($xml,'get_paises.xsl');
-        return $paises;
-    }
-    
-    function metodo_get_estados($pais=null) {
-        $xml     = open_file("estados.xml");
-        $estados = get_xmlt($xml,'get_estados.xsl');
-        if($pais!==null){
-            $msg = 'País: '.$pais; 
-            return 'mensaje: '.$msg;
-        }
-    }
     //echo metodo_get_paises();
     //echo metodo_get_estados(metodo_get_paises());
     //die();
@@ -93,9 +79,9 @@
                     $metodos['get_paises'], // nombre del metodo o funcion
                     array(), // Estructura de parámetros de entrada
                     array('return' => 'xsd: string'), // Estructura de parámetros de salida
-                    $miURL // namespace
+                    $ns // namespace
                     /*
-                     $miURL.'#'.$metodos['get_estados'], // soapaction debe ir asociado al nombre del metodo 'Acción soap'
+                     $ns.'#'.$metodos['get_estados'], // soapaction debe ir asociado al nombre del metodo 'Acción soap'
                      'rpc', // style
                      'encoded', // use
                      'Devuelve los nombres de los países disponibles para el método metodo_get_estados' // documentation
@@ -105,14 +91,42 @@
                     $metodos['get_estados'], // nombre del metodo o funcion
                     array('pais'   => 'xsd: string'), // Estructura de parámetros de entrada
                     array('return' => 'xsd: string'), // Estructura de parámetros de salida
-                    $miURL // namespace
+                    $ns // namespace
                     /*
-                     $miURL.'#'.$metodos['get_estados'], // soapaction debe ir asociado al nombre del metodo 'Acción soap'
+                     $ns.'#'.$metodos['get_estados'], // soapaction debe ir asociado al nombre del metodo 'Acción soap'
                      'rpc', // style
                      'encoded', // use
                      'Este método recibe el nombre del país del que quiera los estados' // documentation
                     */
                 );
+    $server->register(
+                    "MiFuncion", 
+                    array(
+                          'num1' => 'xsd:integer', 
+                          'num2' => 'xsd:integer'
+                    ),array(
+                          'return' => 'xsd:string'
+                    ),
+                    $ns 
+    );
+    function metodo_get_paises(){
+        //$xml     = open_file("estados.xml");
+        //$paises  = get_xmlt($xml,'get_paises.xsl');
+        return "hola";
+    }
+    function metodo_get_estados($pais=null) {
+        $xml     = open_file("estados.xml");
+        $estados = get_xmlt($xml,'get_estados.xsl');
+        if($pais!==null){
+            $msg = 'País: '.$pais; 
+            return 'mensaje: '.$msg;
+        }
+    }
+    function MiFuncion($num1, $num2){
+        $resultadoSuma = $num1 + $num2;
+        $resultado = "El resultado de la suma de " . $num1 . "+" .$num2 . " es: " . $resultadoSuma;	
+        return $resultado;     
+    }
    
     $HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
     $server->service($HTTP_RAW_POST_DATA);
