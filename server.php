@@ -21,20 +21,23 @@
             $xslt = new xsltProcessor;
             $xslt->importStyleSheet(DomDocument::load($name));
             $xslt_data = $xslt->transformToXML(DomDocument::loadXML($file));
+            return $xslt_data;
         }
     }
     $xml     = open_file("estados.xml");
     $estados = get_xmlt($xml,'get_estados.xsl');
     $paises  = get_xmlt($xml,'get_paises.xsl');
-    echo "estados";
-    echo "<pre>";
-    echo htmlspecialchars($estados);
-    echo "</pre>";
+    /*
+     echo "<pre>";
+     echo htmlspecialchars($estados);
+     echo htmlspecialchars($paises);
+     echo "</pre>";
+    */
     /***********************************WS************************************/
     $server = new nusoap_server();
     $metodos = array(
-        'get_paises'=>"metodo_get_paises",
-        'get_estados'=>"metodo_get_estados"
+        'get_paises'  => "metodo_get_paises",
+        'get_estados' => "metodo_get_estados"
     );
     $urn = array(
         'url1'=>"mi_ws1"
