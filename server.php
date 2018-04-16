@@ -78,7 +78,7 @@
     $server->register(  
                     $metodos['get_paises'], // nombre del metodo o funcion
                     array(), // Estructura de parámetros de entrada
-                    array('return' => 'xsd: string'), // Estructura de parámetros de salida
+                    array('return' => 'xsd:string'), // Estructura de parámetros de salida
                     $ns // namespace
                     /*
                      $ns.'#'.$metodos['get_estados'], // soapaction debe ir asociado al nombre del metodo 'Acción soap'
@@ -89,8 +89,8 @@
                 );
     $server->register(  
                     $metodos['get_estados'], // nombre del metodo o funcion
-                    array('pais'   => 'xsd: string'), // Estructura de parámetros de entrada
-                    array('return' => 'xsd: string'), // Estructura de parámetros de salida
+                    array('pais'   => 'xsd:string'), // Estructura de parámetros de entrada
+                    array('return' => 'xsd:string'), // Estructura de parámetros de salida
                     $ns // namespace
                     /*
                      $ns.'#'.$metodos['get_estados'], // soapaction debe ir asociado al nombre del metodo 'Acción soap'
@@ -110,16 +110,15 @@
                     $ns 
     );
     function metodo_get_paises(){
-        //$xml     = open_file("estados.xml");
-        //$paises  = get_xmlt($xml,'get_paises.xsl');
-        return "hola";
+        $xml     = open_file("estados.xml");
+        $paises  = get_xmlt($xml,'get_paises.xsl');
+        return $paises;
     }
     function metodo_get_estados($pais=null) {
-        $xml     = open_file("estados.xml");
-        $estados = get_xmlt($xml,'get_estados.xsl');
         if($pais!==null){
-            $msg = 'País: '.$pais; 
-            return 'mensaje: '.$msg;
+            $xml     = open_file("estados.xml");
+            $estados = get_xmlt($xml,'get_estados.xsl'); 
+            return $estados;
         }
     }
     function MiFuncion($num1, $num2){
