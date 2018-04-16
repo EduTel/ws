@@ -8,7 +8,7 @@
         indent: indenta la salida de la transformación (yes o no).
     -->
     <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes" />
-    <xsl:template match="/estados" mode="TOC">
+    <xsl:template match="/estados/pais" >
         <nombre>
             <xsl:value-of select="@name" />
         </nombre>
