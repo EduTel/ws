@@ -24,9 +24,7 @@
             return $xslt_data;
         }
     }
-    $xml     = open_file("estados.xml");
-    $estados = get_xmlt($xml,'get_estados.xsl');
-    $paises  = get_xmlt($xml,'get_paises.xsl');
+    
     /*
      echo "<pre>";
      echo htmlspecialchars($estados);
@@ -48,64 +46,72 @@
     $server->wsdl->schemaTargetNamespace = $miURL;
     // Parametros de entrada
     /*
-    $server->wsdl->addComplexType(  'type_entrada_get_estados', 
-                                    'complexType', 
-                                    'struct', 
-                                    'all', 
-                                    '',
-                                    array(
-                                        'pais'   => array(
-                                                            'name' => 'pais',
-                                                            'type' => 'xsd:  string'
-                                                        ),
-                                    )
-                                );
-    // Parametros de Salida
-    $server->wsdl->addComplexType(  'type_salida_get_estados', 
-                                    'complexType', 
-                                    'struct', 
-                                    'all', 
-                                    '',
-                                    array(
-                                        'mensaje'   => array(
-                                                             'name' => 'mensaje',
-                                                             'type' => 'xsd:string'
-                                                            )
-                                    )
-                                );
+     $server->wsdl->addComplexType(  'type_entrada_get_estados', 
+                                     'complexType', 
+                                     'struct', 
+                                     'all', 
+                                     '',
+                                     array(
+                                         'pais'   => array(
+                                                             'name' => 'pais',
+                                                             'type' => 'xsd:  string'
+                                                         ),
+                                     )
+                                 );
+     // Parametros de Salida
+     $server->wsdl->addComplexType(  'type_salida_get_estados', 
+                                     'complexType', 
+                                     'struct', 
+                                     'all', 
+                                     '',
+                                     array(
+                                         'mensaje'   => array(
+                                                              'name' => 'mensaje',
+                                                              'type' => 'xsd:string'
+                                                             )
+                                     )
+                                 );
     */
     function metodo_get_paises(){
-        return array(
-            'pises' => $paises
-        );
+        $xml     = open_file("estados.xml");
+        $paises  = get_xmlt($xml,'get_paises.xsl');
+        return $paises;
     }
+    
     function metodo_get_estados($pais=null) {
+        $xml     = open_file("estados.xml");
+        $estados = get_xmlt($xml,'get_estados.xsl');
         if($pais!==null){
             $msg = 'País: '.$pais; 
-            return array(
-                        'mensaje' => $msg
-            );
+            return 'mensaje: '.$msg;
         }
     }
+    //echo metodo_get_paises();
+    //echo metodo_get_estados(metodo_get_paises());
+    //die();
     $server->register(  
                     $metodos['get_paises'], // nombre del metodo o funcion
-                    array('pais'   => 'xsd: string'), // Estructura de parámetros de entrada
+                    array(), // Estructura de parámetros de entrada
                     array('return' => 'xsd: string'), // Estructura de parámetros de salida
-                    $miURL, // namespace
-                    $miURL.'#'.$metodos['get_estados'], // soapaction debe ir asociado al nombre del metodo /*Acción soap*/
-                    'rpc', // style
-                    'encoded', // use
-                    'Devuelve los nombres de los países disponibles para el método metodo_get_estados' // documentation
+                    $miURL // namespace
+                    /*
+                     $miURL.'#'.$metodos['get_estados'], // soapaction debe ir asociado al nombre del metodo 'Acción soap'
+                     'rpc', // style
+                     'encoded', // use
+                     'Devuelve los nombres de los países disponibles para el método metodo_get_estados' // documentation
+                    */
                 );
     $server->register(  
                     $metodos['get_estados'], // nombre del metodo o funcion
                     array('pais'   => 'xsd: string'), // Estructura de parámetros de entrada
                     array('return' => 'xsd: string'), // Estructura de parámetros de salida
-                    $miURL, // namespace
-                    $miURL.'#'.$metodos['get_estados'], // soapaction debe ir asociado al nombre del metodo /*Acción soap*/
-                    'rpc', // style
-                    'encoded', // use
-                    'Este método recibe el nombre del país del que quiera los estados' // documentation
+                    $miURL // namespace
+                    /*
+                     $miURL.'#'.$metodos['get_estados'], // soapaction debe ir asociado al nombre del metodo 'Acción soap'
+                     'rpc', // style
+                     'encoded', // use
+                     'Este método recibe el nombre del país del que quiera los estados' // documentation
+                    */
                 );
    
     $HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
