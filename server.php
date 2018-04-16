@@ -72,8 +72,12 @@
                                      )
                                  );
     */
-    //echo metodo_get_paises();
-    //echo metodo_get_estados(metodo_get_paises());
+    //echo "<pre>";
+    //echo htmlspecialchars(metodo_get_paises());
+    //echo "</pre>";
+    //echo "<pre>";
+    //echo htmlspecialchars(metodo_get_estados(metodo_get_paises()));
+    //echo "</pre>";
     //die();
     $server->register(  
                     $metodos['get_paises'], // nombre del metodo o funcion
@@ -127,6 +131,6 @@
         return $resultado;     
     }
    
-    $HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
-    $server->service($HTTP_RAW_POST_DATA);
+    //$HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
+    //$server->service($HTTP_RAW_POST_DATA);
 ?>
