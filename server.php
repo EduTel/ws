@@ -1,26 +1,35 @@
 <?php
     include_once("nusoap-0.9.5/lib/nusoap.php");
-    function get_xmlt($name=null){
+    function open_file($file=null){
         if($name!==null){
-            $myfile  = fopen("estados.xml", "r") or die("Unable to open file!");
-            $xmldata = "";
+            $myfile  = fopen($file, "r") or die("Unable to open file!");
+            $data = "";
             while ($line = fgets($myfile)) {
-                $xmldata.=$line;
+                $data.=$line;
             }
             fclose($myfile);
-            //echo "<pre>";
-            //echo htmlspecialchars($xmldata);
-            //echo "</pre>";
-            $xslt = new xsltProcessor;
-            $xslt->importStyleSheet(DomDocument::load($name));
-            $xslt_data = $xslt->transformToXML(DomDocument::loadXML($xmldata));
+            /*
+             echo "<pre>";
+             echo htmlspecialchars($xmldata);
+             echo "</pre>";
+            */
+            return $data;
         }
     }
-    $paises  = get_xmlt('get_estados.xsl');
-    $estados = get_xmlt('get_paises.xsl');
-    //echo "<pre>";
-    //echo htmlspecialchars($xslt_data);
-    //echo "</pre>";
+    function get_xmlt($file,$name=null){
+        if($name!==null){
+            $xslt = new xsltProcessor;
+            $xslt->importStyleSheet(DomDocument::load($name));
+            $xslt_data = $xslt->transformToXML(DomDocument::loadXML($file));
+        }
+    }
+    $xml     = open_file("estados.xml");
+    $estados = get_xmlt($xml,'get_estados.xsl');
+    $paises  = get_xmlt($xml,'get_paises.xsl');
+    echo "estados";
+    echo "<pre>";
+    echo htmlspecialchars($paises);
+    echo "</pre>";
     /***********************************WS************************************/
     $server = new nusoap_server();
     $metodos = array(
@@ -80,6 +89,6 @@
                     'Este método recibe el nombre del país del que quiera los estados' // documentation
                 );
    
-    $HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
-    $server->service($HTTP_RAW_POST_DATA);
+    //$HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
+    //$server->service($HTTP_RAW_POST_DATA);
 ?>
