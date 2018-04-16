@@ -42,9 +42,9 @@
     $urn = array(
         'url1'=>"mi_ws1"
     );
-    $miURL    = 'urn : '.$urn['url1'];
-    $endpoint = 'http: //regochan.com/nusoap/soap_servidor.php';
-    $server->configureWSDL('Web servicie de Eduardo ',$miURL);
+    $miURL    = 'urn:'.$urn['url1'];
+    $endpoint = 'http://127.0.0.1/ws/index.php';
+    $server->configureWSDL('Web servicie de Eduardo',$miURL);
     $server->wsdl->schemaTargetNamespace = $miURL;
     // Parametros de entrada
     /*
