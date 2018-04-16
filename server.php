@@ -1,7 +1,7 @@
 <?php
     include_once("nusoap-0.9.5/lib/nusoap.php");
     function open_file($file=null){
-        if($name!==null){
+        if($file!==null){
             $myfile  = fopen($file, "r") or die("Unable to open file!");
             $data = "";
             while ($line = fgets($myfile)) {
@@ -28,11 +28,12 @@
     $paises  = get_xmlt($xml,'get_paises.xsl');
     echo "estados";
     echo "<pre>";
-    echo htmlspecialchars($paises);
+    echo htmlspecialchars($estados);
     echo "</pre>";
     /***********************************WS************************************/
     $server = new nusoap_server();
     $metodos = array(
+        'get_paises'=>"metodo_get_paises",
         'get_estados'=>"metodo_get_estados"
     );
     $urn = array(
@@ -70,7 +71,12 @@
                                     )
                                 );
     */
-     function metodo_get_estados($pais=null) {
+    function metodo_get_paises(){
+        return array(
+            'pises' => $paises
+        );
+    }
+    function metodo_get_estados($pais=null) {
         if($pais!==null){
             $msg = 'País: '.$pais; 
             return array(
@@ -78,6 +84,16 @@
             );
         }
     }
+    $server->register(  
+                    $metodos['get_paises'], // nombre del metodo o funcion
+                    array('pais'   => 'xsd: string'), // Estructura de parámetros de entrada
+                    array('return' => 'xsd: string'), // Estructura de parámetros de salida
+                    $miURL, // namespace
+                    $miURL.'#'.$metodos['get_estados'], // soapaction debe ir asociado al nombre del metodo /*Acción soap*/
+                    'rpc', // style
+                    'encoded', // use
+                    'Devuelve los nombres de los países disponibles para el método metodo_get_estados' // documentation
+                );
     $server->register(  
                     $metodos['get_estados'], // nombre del metodo o funcion
                     array('pais'   => 'xsd: string'), // Estructura de parámetros de entrada
