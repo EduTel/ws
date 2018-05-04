@@ -1,7 +1,7 @@
 <?php
     include_once("nusoap-0.9.5/lib/nusoap.php");
     //url del webservice
-    $wsdl="http://127.0.0.1/ws/server.php?wsdl";
+    $wsdl="http://127.0.0.1/ws-nusoap-php/server.php?wsdl";
      //instanciando un nuevo objeto cliente para consumir el webservice
     $client = new nusoap_client($wsdl,'wsdl');
     //ELIMINIAMOS CACHE
