@@ -5,165 +5,197 @@
 <estados url="https://es.wikipedia.org/wiki/Organizaci%C3%B3n_territorial_de_M%C3%A9xico" >
     <!-- <h1>XML de países y estados</h1> -->
     <pais name='mexico'> 
-        <estado id='1'>
+        <estado id='01'>
             <nombre>Aguascalientes</nombre>
             <abreviatura>Ags</abreviatura>
             <capilal>Aguascalientes</capilal>
+            <file>Aguascalientes.xml</file>
         </estado>
-       <estado id='2'>
+       <estado id='02'>
             <nombre>Baja California</nombre>
             <abreviatura>B. C.</abreviatura> 
             <capilal>Mexicali</capilal>
+            <file>Baja California.xml</file>
         </estado>
-       <estado id='3'>
+       <estado id='03'>
             <nombre>Baja California Sur	</nombre>
             <abreviatura>B. C. S.</abreviatura>
             <capilal>La Paz</capilal>
+            <file>Baja California Sur.xml</file>
         </estado>
-       <estado id='4'>
+       <estado id='04'>
             <nombre>Campeche</nombre>
             <abreviatura>Camp.</abreviatura>
             <capilal>San Francisco de Campeche</capilal>
+            <file>Campeche.xml</file>
         </estado>
-       <estado id='5'>
-            <nombre>Chiapas</nombre>
-            <abreviatura>Chis.</abreviatura>
-            <capilal>Tuxtla Gutiérrez</capilal>
-        </estado>
-       <estado id='6'>
-            <nombre>Chihuahua</nombre>
-            <abreviatura>Chih.</abreviatura>
-            <capilal>Chihuahua</capilal>
-        </estado>
-       <estado id='7'>
-            <nombre>Ciudad de México</nombre>
-            <abreviatura>CDMX</abreviatura> 
-            <capilal></capilal>
-        </estado>
-       <estado id='8'>
+        <estado id='05'>
             <nombre>Coahuila de Zaragoza</nombre>
             <abreviatura>Coah.</abreviatura>
             <capilal>Saltillo</capilal>
+            <file>Coahuila de Zaragoza.xml</file>
         </estado>
-       <estado id='9'>
+        <estado id='06'>
             <nombre>Colima</nombre>
             <abreviatura>Col.</abreviatura>
             <capilal>Colima</capilal>
+            <file>Colima.xml</file>
+        </estado>
+        <estado id='07'>
+            <nombre>Chiapas</nombre>
+            <abreviatura>Chis.</abreviatura>
+            <capilal>Tuxtla Gutiérrez</capilal>
+            <file></file>
+        </estado>
+        <estado id='08'>
+            <nombre>Chihuahua</nombre>
+            <abreviatura>Chih.</abreviatura>
+            <capilal>Chihuahua</capilal>
+            <file>Chihuahua.xml</file>
+        </estado>
+        <estado id='09'>
+            <nombre>Ciudad de México</nombre>
+            <abreviatura>CDMX</abreviatura> 
+            <capilal></capilal>
+            <file>Ciudad de México.xml</file>
         </estado>
        <estado id='10'>
             <nombre>Durango</nombre>
             <abreviatura>Dgo.</abreviatura>
             <capilal>Victoria de Durango</capilal>
+            <file>Durango.xml</file>
         </estado>
        <estado id='11'>
             <nombre>Guanajuato</nombre>
             <abreviatura>Gto.</abreviatura>
             <capilal>Guanajuato</capilal>
+            <file>Guanajuato.xml</file>
         </estado>
        <estado id='12'>
             <nombre>Guerrero</nombre>
             <abreviatura>Gro.</abreviatura>
             <capilal>Chilpancingo de los Bravo</capilal>
+            <file>Guerrero.xml</file>
         </estado>
        <estado id='13'>
             <nombre>Hidalgo</nombre>
             <abreviatura>Hgo.</abreviatura>
             <capilal>Pachuca de Soto</capilal>
+            <file>Hidalgo.xml</file>
         </estado>
        <estado id='14'>
             <nombre>Jalisco</nombre>
             <abreviatura>Jal.</abreviatura> 
             <capilal>Guadalajara</capilal>
+            <file>Jalisco.xml</file>
         </estado>
        <estado id='15'>
             <nombre>México</nombre>
             <abreviatura>Méx.</abreviatura>
             <capilal>Toluca de Lerdo</capilal>
+            <file>México.xml</file>
         </estado>
        <estado id='16'>
             <nombre>Michoacán de Ocampo</nombre>
             <abreviatura>Mich.</abreviatura>
             <capilal>Morelia</capilal>
+            <file>Michoacán de Ocampo.xml</file>
         </estado>
        <estado id='17'>
             <nombre>Morelos</nombre>
             <abreviatura>Mor.</abreviatura>
             <capilal>Cuernavaca</capilal>
+            <file>Morelos.xml</file>
         </estado>
        <estado id='18'>
             <nombre>Nayarit</nombre>
             <abreviatura>Nay.</abreviatura>
             <capilal>Tepic</capilal>
+            <file>Nayarit.xml</file>
         </estado>
        <estado id='19'>
             <nombre>Nuevo León</nombre>
             <abreviatura>N. L.</abreviatura>
             <capilal>Monterrey</capilal>
+            <file>Nuevo León.xml</file>
         </estado>
        <estado id='20'>
             <nombre>Oaxaca</nombre>
             <abreviatura>Oax.</abreviatura>
             <capilal>Oaxaca de Juárez</capilal>
+            <file>Oaxaca.xml</file>
         </estado>
        <estado id='21'>
             <nombre>Puebla</nombre>
             <abreviatura>Pue.</abreviatura>
             <capilal>Puebla de Zaragoza</capilal>
+            <file>Puebla.xml</file>
         </estado>
        <estado id='22'>
             <nombre>Querétaro de Arteaga</nombre>
             <abreviatura>Qro.</abreviatura>
             <capilal>Santiago de Querétaro</capilal>
+            <file>Querétaro.xml</file>
         </estado>
        <estado id='23'>
             <nombre>Quintana Roo</nombre>
             <abreviatura>Q. R.</abreviatura> 
             <capilal>Chetumal</capilal>
+            <file>Quintana Roo.xml</file>
         </estado>
        <estado id='24'>
             <nombre>San Luis Potosí</nombre>
             <abreviatura>S. L. P.</abreviatura>
             <capilal>San Luis Potosí</capilal>
+            <file>San Luis Potosí.xml</file>
         </estado>
        <estado id='25'>
             <nombre>Sinaloa</nombre>
             <abreviatura>Sin.</abreviatura>
             <capilal>Culiacán Rosales</capilal>
+            <file>Sinaloa.xml</file>
         </estado>
        <estado id='26'>
             <nombre>Sonora</nombre>
             <abreviatura>Son.</abreviatura>
             <capilal>Hermosillo</capilal>
+            <file>Sonora.xml</file>
         </estado>   
        <estado id='27'>
             <nombre>Tabasco</nombre>
             <abreviatura>Tab.</abreviatura>
             <capilal>Villahermosa</capilal>
+            <file>Tabasco.xml</file>
         </estado>   
        <estado id='28'>
             <nombre>Tamaulipas</nombre>
             <abreviatura>Tamps.</abreviatura>
             <capilal>Ciudad Victoria</capilal>
+            <file>Tamaulipas.xml</file>
         </estado>   
        <estado id='29'>
             <nombre>Tlaxcala</nombre>
             <abreviatura>Tlax.</abreviatura>
             <capilal>Tlaxcala de Xicohténcatl</capilal>
+            <file>Tlaxcala.xml</file>
         </estado>   
        <estado id='30'>
             <nombre>Veracruz de Ignacio de la Llave</nombre>
             <abreviatura>Ver.</abreviatura>
             <capilal>Xalapa-Enríquez</capilal>
+            <file>Veracruz de Ignacio de la Llave.xml</file>
         </estado>   
        <estado id='31'>
             <nombre>Yucatán</nombre>
             <abreviatura>Yuc.</abreviatura>
             <capilal>Mérida</capilal>
+            <file>Yucatán.xml</file>
         </estado>   
        <estado id='32'>
             <nombre>Zacatecas</nombre>
             <abreviatura>Zac</abreviatura>
             <capilal>Zacatecas	</capilal>
+            <file>Zacatecas.xml</file>
         </estado>        
     </pais>
 </estados>
