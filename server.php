@@ -115,13 +115,13 @@
     );
     function metodo_get_paises(){
         $xml     = open_file("estados.xml");
-        $paises  = get_xmlt($xml,'get_paises.xsl');
+        $paises  = get_xmlt($xml,'xml/get_paises.xsl');
         return $paises;
     }
     function metodo_get_estados($pais=null) {
         if($pais!==null){
-            $xml     = open_file("estados.xml");
-            $estados = get_xmlt($xml,'get_estados.xsl'); 
+            $xml     = open_file("xml/estados.xml");
+            $estados = get_xmlt($xml,'xml/get_estados.xsl'); 
             return $estados;
         }
     }
