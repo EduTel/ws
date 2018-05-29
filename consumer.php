@@ -10,8 +10,13 @@
     $resultado = $client->call('metodo_get_paises');
     print_r($resultado);
     //GENERAMOS EL PARAMETRO DE ESTADO Y MUNICIPIO
-    $params = array('mexico');
-    $resultado = $client->call('metodo_get_estados', $params);
+    if($_GET['call']=='metodo_get_estados'){
+        $params = array('mexico');
+        $resultado = $client->call('metodo_get_estados', $params);
+    }elseif($_GET['call']=='metodo_get_estado'){
+        $params = array('Aguascalientes');
+        $resultado = $client->call('metodo_get_estado', $params);
+    }
     echo "<pre>";
     echo htmlspecialchars($resultado);
     echo "</pre>";

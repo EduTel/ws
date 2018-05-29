@@ -24,18 +24,12 @@
             return $xslt_data;
         }
     }
-    
-    /*
-     echo "<pre>";
-     echo htmlspecialchars($estados);
-     echo htmlspecialchars($paises);
-     echo "</pre>";
-    */
     /***********************************WS************************************/
     $server = new nusoap_server();
     $metodos = array(
         'get_paises'  => "metodo_get_paises",
-        'get_estados' => "metodo_get_estados"
+        'get_estados' => "metodo_get_estados",
+        'get_estado' => "metodo_get_estado"
     );
     $urn = array(
         'url1'=>"mi_ws1"
@@ -103,6 +97,18 @@
                      'Este método recibe el nombre del país del que quiera los estados' // documentation
                     */
                 );
+    $server->register(  
+                    $metodos['get_estado'], // nombre del metodo o funcion
+                    array('estado'   => 'xsd:string'), // Estructura de parámetros de entrada
+                    array('return' => 'xsd:string'), // Estructura de parámetros de salida
+                    $ns // namespace
+                    /*
+                     $ns.'#'.$metodos['get_estados'], // soapaction debe ir asociado al nombre del metodo 'Acción soap'
+                     'rpc', // style
+                     'encoded', // use
+                     'Este método recibe el nombre del país del que quiera los estados' // documentation
+                    */
+                );
     $server->register(
                     "MiFuncion", 
                     array(
@@ -114,14 +120,26 @@
                     $ns 
     );
     function metodo_get_paises(){
-        $xml     = open_file("estados.xml");
-        $paises  = get_xmlt($xml,'xml/get_paises.xsl');
+        $url = "xml/paises/";
+        $xml     = open_file($url."estados.xml");
+        $paises  = get_xmlt($xml,$url.'get_paises.xsl');
         return $paises;
     }
     function metodo_get_estados($pais=null) {
         if($pais!==null){
-            $xml     = open_file("xml/estados.xml");
-            $estados = get_xmlt($xml,'xml/get_estados.xsl'); 
+            $url = "xml/estados/";
+            $xml     = open_file($url."estados.xml");
+            $estados = get_xmlt($xml,$url."get_estados.xsl"); 
+            return $estados;
+        }
+    }
+    function metodo_get_estado($estado=null) {
+        if($estado!==null){
+            $url = "xml/estados/";
+            $xml     = open_file($url."estados.xml");
+            $estados = get_xmlt($xml,$url."get_all.xsl");
+
+            $url = "xml/codigos postales/"; 
             return $estados;
         }
     }

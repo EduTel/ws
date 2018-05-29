@@ -12,6 +12,11 @@ abreviatura,
 capilal {
     display: block;
 }
+nombre,
+abreviatura,
+capilal {
+    display: block;
+}
 pais {
     counter-reset: contador;
 }

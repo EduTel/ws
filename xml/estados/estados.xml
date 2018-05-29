@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--<?xml-stylesheet type="text/xsl" href="get_estados.xsl"?>-->
-<!--<?xml-stylesheet type="text/xsl" href="get_paises.xsl"?>-->
+<?xml-stylesheet type="text/xsl" href="get_all.xsl"?>
+<?xml-stylesheet href="estados.css" title="Estilo1"?>
 <!-- <estados url="https://es.wikipedia.org/wiki/Organizaci%C3%B3n_territorial_de_M%C3%A9xico" xmlns="http://www.w3.org/1999/xhtml"> -->
 <estados url="https://es.wikipedia.org/wiki/Organizaci%C3%B3n_territorial_de_M%C3%A9xico" >
     <!-- <h1>XML de países y estados</h1> -->
