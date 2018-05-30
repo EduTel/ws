@@ -13,7 +13,7 @@
         $params = array('mexico');
         $resultado = $client->call('metodo_get_estados', $params);
     }elseif($_GET['call']=='metodo_get_estado'){
-        $params = array('Aguascalientes');
+        $params = array('01');
         $resultado = $client->call('metodo_get_estado', $params);
     }
     if( isset($resultado) ){

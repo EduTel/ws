@@ -2,7 +2,7 @@
     include_once("nusoap-0.9.5/lib/nusoap.php");
     function open_file($file=null){
         if($file!==null){
-            $myfile  = fopen($file, "r") or die("Unable to open file!");
+            $myfile  = fopen(utf8_decode($file), "r") or die("Unable to open file!");
             $data = "";
             while ($line = fgets($myfile)) {
                 $data.=$line;
@@ -16,10 +16,10 @@
             return $data;
         }
     }
-    function get_xmlt($file,$name=null,$xpath=null){
-        if($name!==null){
+    function get_xmlt($file,$xmlt_name=null,$xpath=null){
+        if($xmlt_name!==null){
             $xslt = new xsltProcessor;
-            $xslt->importStyleSheet(DomDocument::load($name));
+            $xslt->importStyleSheet(DomDocument::load($xmlt_name));
             if($xpath===null){
                 $xslt_data = $xslt->transformToXML(DomDocument::loadXML($file));
             }else{
@@ -36,7 +36,7 @@
     $metodos = array(
         'get_paises'  => "metodo_get_paises",
         'get_estados' => "metodo_get_estados",
-        'get_estado'  => "metodo_get_estado"
+        'get_estado'  => "metodo_get_estado_municipio"
     );
     $urn = array(
         'url1'=>"mi_ws1"
@@ -133,13 +133,25 @@
             return $estados;
         }
     }
-    function metodo_get_estado($estado=null) {
+    function metodo_get_estado_municipio($estado=null) {
         if($estado!==null){
-            $url     = "xml/estados/";
-            $xml     = open_file($url."estados.xml");
-            $estados = get_xmlt($xml,$url."get_all.xsl",'//*[@id="'.$estado.'"]/file');
-            $url     = "xml/codigos postales/";
-            return $estados;
+            $url1           = "xml/estados/";
+            $xml            = open_file($url1."estados.xml");
+            $estados        = get_xmlt($xml,$url1."get_all.xsl",'//*[@id="'.$estado.'"]/file');
+
+            $url2           = "xml/codigos postales/";
+            $xml_estado     = open_file($url2.$estados);
+            //$xml_estado     = open_file($url2."get_estado.xsl");
+            $get_estado_all = get_xmlt($xml_estado,$url2."get_estado.xsl");
+            /*
+            $string         = "<estados_inf>".str_replace('<?xml version="1.0" encoding="UTF-8"?>',"",$get_estado_all)."</estados_inf>";
+            */
+            /*
+                $xslt_data = new SimpleXMLElement( $string );
+                $xslt_data = $xslt_data->xpath($xpath)[0];
+                return $xml_estado;
+            */
+            return htmlspecialchars($get_estado_all);
         }
     }
     //function MiFuncion($num1, $num2){
@@ -148,8 +160,8 @@
         //return $resultado;
     //}
     //echo metodo_get_estados('mexico');
-    //echo metodo_get_estado("01");
+    echo metodo_get_estado_municipio("22");
     //metodo_get_estado('01');
-    $HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
-    $server->service($HTTP_RAW_POST_DATA);
+    //$HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
+    //$server->service($HTTP_RAW_POST_DATA);
 ?>
