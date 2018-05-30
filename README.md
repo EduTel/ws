@@ -5,4 +5,5 @@ fuente estados
 https://es.wikipedia.org/wiki/Organizaci%C3%B3n_territorial_de_M%C3%A9xico
 fuente codigos postales
 http://www.sepomex.gob.mx/lservicios/servicios/CodigoPostal_Exportar.aspx
+http://www.correosdemexico.gob.mx/datosabiertos/gobmx/gobmx_CodigoPostal_Exportar.html
 

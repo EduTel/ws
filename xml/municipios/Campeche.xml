@@ -1,0 +1,13 @@
+<select>
+    <option value="010">Calakmul</option>
+    <option value="001">Calkiní</option>
+    <option value="002">Campeche</option>
+    <option value="011">Candelaria</option>
+    <option value="003">Carmen</option>
+    <option value="004">Champotón</option>
+    <option value="009">Escárcega</option>
+    <option value="005">Hecelchakán</option>
+    <option value="006">Hopelchén</option>
+    <option value="007">Palizada</option>
+    <option value="008">Tenabo</option>
+</select>

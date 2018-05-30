@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="estados.css" title="Estilo1"?>
+<estados>
+    <table>
+        <d_codigo>76000</d_codigo>
+        <d_asenta>Centro</d_asenta>
+        <d_tipo_asenta>Colonia</d_tipo_asenta>
+        <D_mnpio>Querétaro</D_mnpio>
+        <d_estado>Querétaro</d_estado>
+        <d_ciudad>Santiago de Querétaro</d_ciudad>
+        <d_CP>76021</d_CP>
+        <c_estado>22</c_estado>
+        <c_oficina>76021</c_oficina>
+        <c_CP>1</c_CP>
+
+        <c_tipo_asenta>09</c_tipo_asenta>
+        <c_mnpio>014</c_mnpio>
+        <id_asenta_cpcons>0001</id_asenta_cpcons>
+        <d_zona>Urbano</d_zona>
+        <c_cve_ciudad>01</c_cve_ciudad>
+    </table>
+    <table>
+        <d_codigo>76005</d_codigo>
+        <d_asenta>Rinconada Morelos</d_asenta>
+        <d_tipo_asenta>Unidad habitacional</d_tipo_asenta>
+        <D_mnpio>Querétaro</D_mnpio>
+        <d_estado>Querétaro</d_estado>
+        <d_ciudad>Santiago de Querétaro</d_ciudad>
+        <d_CP>76021</d_CP>
+        <c_estado>22</c_estado>
+        <c_oficina>76021</c_oficina>
+        <c_CP>1</c_CP>
+
+        <c_tipo_asenta>31</c_tipo_asenta>
+        <c_mnpio>014</c_mnpio>
+        <id_asenta_cpcons>1683</id_asenta_cpcons>
+        <d_zona>Urbano</d_zona>
+        <c_cve_ciudad>01</c_cve_ciudad>
+    </table>
+    <table>
+        <d_codigo>76005</d_codigo>
+        <d_asenta>Vicente Guerrero</d_asenta>
+        <d_tipo_asenta>Unidad habitacional</d_tipo_asenta>
+        <D_mnpio>Querétaro</D_mnpio>
+        <d_estado>Querétaro</d_estado>
+        <d_ciudad>Santiago de Querétaro</d_ciudad>
+        <d_CP>76021</d_CP>
+        <c_estado>22</c_estado>
+        <c_oficina>76021</c_oficina>
+        <c_CP>1</c_CP>
+
+        <c_tipo_asenta>31</c_tipo_asenta>
+        <c_mnpio>014</c_mnpio>
+        <id_asenta_cpcons>1682</id_asenta_cpcons>
+        <d_zona>Urbano</d_zona>
+        <c_cve_ciudad>01</c_cve_ciudad>
+    </table>
+    <table>
+        <d_codigo>76005</d_codigo>
+        <d_asenta>Rincón de San Andrés</d_asenta>
+        <d_tipo_asenta>Fraccionamiento</d_tipo_asenta>
+        <D_mnpio>Querétaro</D_mnpio>
+        <d_estado>Querétaro</d_estado>
+        <d_ciudad>Santiago de Querétaro</d_ciudad>
+        <d_CP>76021</d_CP>
+        <c_estado>22</c_estado>
+        <c_oficina>76021</c_oficina>
+        <c_CP>1</c_CP>
+
+        <c_tipo_asenta>21</c_tipo_asenta>
+        <c_mnpio>014</c_mnpio>
+        <id_asenta_cpcons>1199</id_asenta_cpcons>
+        <d_zona>Urbano</d_zona>
+        <c_cve_ciudad>01</c_cve_ciudad>
+    </table>
+    <table>
+        <d_codigo>76005</d_codigo>
+        <d_asenta>Mariano Escobedo</d_asenta>
+        <d_tipo_asenta>Unidad habitacional</d_tipo_asenta>
+        <D_mnpio>Querétaro</D_mnpio>
+        <d_estado>Querétaro</d_estado>
+        <d_ciudad>Santiago de Querétaro</d_ciudad>
+        <d_CP>76021</d_CP>
+        <c_estado>22</c_estado>
+        <c_oficina>76021</c_oficina>
+        <c_CP>1</c_CP>
+
+
+        <c_tipo_asenta>31</c_tipo_asenta>
+        <c_mnpio>014</c_mnpio>
+        <id_asenta_cpcons>1681</id_asenta_cpcons>
+        <d_zona>Urbano</d_zona>
+        <c_cve_ciudad>01</c_cve_ciudad>
+    </table>
+</estados>

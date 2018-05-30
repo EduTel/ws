@@ -1,0 +1,20 @@
+<select>
+    <option value="001">Amealco de Bonfil</option>
+    <option value="003">Arroyo Seco</option>
+    <option value="004">Cadereyta de Montes</option>
+    <option value="005">Colón</option>
+    <option value="006">Corregidora</option>
+    <option value="011">El Marqués</option>
+    <option value="007">Ezequiel Montes</option>
+    <option value="008">Huimilpan</option>
+    <option value="009">Jalpan de Serra</option>
+    <option value="010">Landa de Matamoros</option>
+    <option value="012">Pedro Escobedo</option>
+    <option value="013">Peñamiller</option>
+    <option value="002">Pinal de Amoles</option>
+    <option value="014">Querétaro</option>
+    <option value="015">San Joaquín</option>
+    <option value="016">San Juan del Río</option>
+    <option value="017">Tequisquiapan</option>
+    <option value="018">Tolimán</option>
+</select>

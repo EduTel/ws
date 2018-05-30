@@ -1,0 +1,12 @@
+<select>
+    <option value="001">Armería</option>
+    <option value="002">Colima</option>
+    <option value="003">Comala</option>
+    <option value="004">Coquimatlán</option>
+    <option value="005">Cuauhtémoc</option>
+    <option value="006">Ixtlahuacán</option>
+    <option value="007">Manzanillo</option>
+    <option value="008">Minatitlán</option>
+    <option value="009">Tecomán</option>
+    <option value="010">Villa de Álvarez</option>
+</select>

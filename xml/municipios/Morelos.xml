@@ -1,0 +1,35 @@
+<select>
+    <option value="001">Amacuzac</option>
+    <option value="002">Atlatlahucan</option>
+    <option value="003">Axochiapan</option>
+    <option value="004">Ayala</option>
+    <option value="005">Coatlán del Río</option>
+    <option value="006">Cuautla</option>
+    <option value="007">Cuernavaca</option>
+    <option value="008">Emiliano Zapata</option>
+    <option value="009">Huitzilac</option>
+    <option value="010">Jantetelco</option>
+    <option value="011">Jiutepec</option>
+    <option value="012">Jojutla</option>
+    <option value="013">Jonacatepec de Leandro Valle</option>
+    <option value="014">Mazatepec</option>
+    <option value="015">Miacatlán</option>
+    <option value="016">Ocuituco</option>
+    <option value="017">Puente de Ixtla</option>
+    <option value="018">Temixco</option>
+    <option value="033">Temoac</option>
+    <option value="019">Tepalcingo</option>
+    <option value="020">Tepoztlán</option>
+    <option value="021">Tetecala</option>
+    <option value="022">Tetela del Volcán</option>
+    <option value="023">Tlalnepantla</option>
+    <option value="024">Tlaltizapán de Zapata</option>
+    <option value="025">Tlaquiltenango</option>
+    <option value="026">Tlayacapan</option>
+    <option value="027">Totolapan</option>
+    <option value="028">Xochitepec</option>
+    <option value="029">Yautepec</option>
+    <option value="030">Yecapixtla</option>
+    <option value="031">Zacatepec</option>
+    <option value="032">Zacualpan de Amilpas</option>
+</select>

@@ -1,0 +1,18 @@
+<select>
+    <option value="010">Álvaro Obregón</option>
+    <option value="002">Azcapotzalco</option>
+    <option value="014">Benito Juárez</option>
+    <option value="003">Coyoacán</option>
+    <option value="004">Cuajimalpa de Morelos</option>
+    <option value="015">Cuauhtémoc</option>
+    <option value="005">Gustavo A. Madero</option>
+    <option value="006">Iztacalco</option>
+    <option value="007">Iztapalapa</option>
+    <option value="008">La Magdalena Contreras</option>
+    <option value="016">Miguel Hidalgo</option>
+    <option value="009">Milpa Alta</option>
+    <option value="011">Tláhuac</option>
+    <option value="012">Tlalpan</option>
+    <option value="017">Venustiano Carranza</option>
+    <option value="013">Xochimilco</option>
+</select>

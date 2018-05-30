@@ -1,0 +1,7 @@
+<select>
+    <option value="001">Comondú</option>
+    <option value="003">La Paz</option>
+    <option value="009">Loreto</option>
+    <option value="008">Los Cabos</option>
+    <option value="002">Mulegé</option>
+</select>

@@ -1,0 +1,22 @@
+<select >
+    <option value="001">Acaponeta</option>
+    <option value="002">Ahuacatlán</option>
+    <option value="003">Amatlán de Cañas</option>
+    <option value="020">Bahía de Banderas</option>
+    <option value="004">Compostela</option>
+    <option value="009">Del Nayar</option>
+    <option value="005">Huajicori</option>
+    <option value="006">Ixtlán del Río</option>
+    <option value="007">Jala</option>
+    <option value="019">La Yesca</option>
+    <option value="010">Rosamorada</option>
+    <option value="011">Ruíz</option>
+    <option value="012">San Blas</option>
+    <option value="013">San Pedro Lagunillas</option>
+    <option value="014">Santa María del Oro</option>
+    <option value="015">Santiago Ixcuintla</option>
+    <option value="016">Tecuala</option>
+    <option value="017">Tepic</option>
+    <option value="018">Tuxpan</option>
+    <option value="008">Xalisco</option>
+</select>

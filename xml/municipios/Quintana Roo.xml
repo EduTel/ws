@@ -1,0 +1,13 @@
+<select>
+    <option value="010">Bacalar</option>
+    <option value="005">Benito Juárez</option>
+    <option value="001">Cozumel</option>
+    <option value="002">Felipe Carrillo Puerto</option>
+    <option value="003">Isla Mujeres</option>
+    <option value="006">José María Morelos</option>
+    <option value="007">Lázaro Cárdenas</option>
+    <option value="004">Othón P. Blanco</option>
+    <option value="011">Puerto Morelos</option>
+    <option value="008">Solidaridad</option>
+    <option value="009">Tulum</option>
+</select>

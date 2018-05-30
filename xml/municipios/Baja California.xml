@@ -1,0 +1,7 @@
+<select>
+    <option value="001">Ensenada</option>
+    <option value="002">Mexicali</option>
+    <option value="005">Playas de Rosarito</option>
+    <option value="003">Tecate</option>
+    <option value="004">Tijuana</option>
+</select>

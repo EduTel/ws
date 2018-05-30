@@ -1,0 +1,20 @@
+<select>
+    <option value="001">Ahome</option>
+    <option value="002">Angostura</option>
+    <option value="003">Badiraguato</option>
+    <option value="007">Choix</option>
+    <option value="004">Concordia</option>
+    <option value="005">Cosalá</option>
+    <option value="006">Culiacán</option>
+    <option value="010">El Fuerte</option>
+    <option value="008">Elota</option>
+    <option value="009">Escuinapa</option>
+    <option value="011">Guasave</option>
+    <option value="012">Mazatlán</option>
+    <option value="013">Mocorito</option>
+    <option value="018">Navolato</option>
+    <option value="014">Rosario</option>
+    <option value="015">Salvador Alvarado</option>
+    <option value="016">San Ignacio</option>
+    <option value="017">Sinaloa</option>
+</select>

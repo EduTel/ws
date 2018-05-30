@@ -1,0 +1,14 @@
+<select>
+    <?xml-stylesheet type="text/xsl" href="get_municipios.xsl"?>
+    <option value="001">Aguascalientes</option>
+    <option value="002">Asientos</option>
+    <option value="003">Calvillo</option>
+    <option value="004">Cosío</option>
+    <option value="010">El Llano</option>
+    <option value="005">Jesús María</option>
+    <option value="006">Pabellón de Arteaga</option>
+    <option value="007">Rincón de Romos</option>
+    <option value="011">San Francisco de los Romo</option>
+    <option value="008">San José de Gracia</option>
+    <option value="009">Tepezalá</option>
+</select>

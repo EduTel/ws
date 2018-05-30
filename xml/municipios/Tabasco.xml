@@ -1,0 +1,19 @@
+<select>
+    <option value="001">Balancán</option>
+    <option value="002">Cárdenas</option>
+    <option value="003">Centla</option>
+    <option value="004">Centro</option>
+    <option value="005">Comalcalco</option>
+    <option value="006">Cunduacán</option>
+    <option value="007">Emiliano Zapata</option>
+    <option value="008">Huimanguillo</option>
+    <option value="009">Jalapa</option>
+    <option value="010">Jalpa de Méndez</option>
+    <option value="011">Jonuta</option>
+    <option value="012">Macuspana</option>
+    <option value="013">Nacajuca</option>
+    <option value="014">Paraíso</option>
+    <option value="015">Tacotalpa</option>
+    <option value="016">Teapa</option>
+    <option value="017">Tenosique</option>
+</select>
