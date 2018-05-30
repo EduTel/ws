@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
     <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <?xml-stylesheet href="estados.css" title="Estilo1"?>
-    <!--    
+    <!--
         method: define el formato de salida (xml, html o text).
         version: define la versión del formato de salida.
         enconding: juego de caracteres de salida. Por defecto UTF-8.
@@ -17,7 +17,7 @@
     </xsl:template>
     -->
     <xsl:template match="/estados/pais/estado">
-        <nombre>
+        <nombre id="{@id}">
             <xsl:value-of select="nombre" />
         </nombre>
     </xsl:template>

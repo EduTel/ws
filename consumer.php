@@ -6,18 +6,19 @@
     $client = new nusoap_client($wsdl,'wsdl');
     //ELIMINIAMOS CACHE
     ini_set("soap.wsdl_cache_enabled", "0");
-    //llamando al método y pasándole el array con los parámetros
-    $resultado = $client->call('metodo_get_paises');
-    print_r($resultado);
     //GENERAMOS EL PARAMETRO DE ESTADO Y MUNICIPIO
-    if($_GET['call']=='metodo_get_estados'){
+    if($_GET['call']=='metodo_get_paises'){
+        $resultado = $client->call('metodo_get_paises', $params);
+    }elseif($_GET['call']=='metodo_get_estados'){
         $params = array('mexico');
         $resultado = $client->call('metodo_get_estados', $params);
     }elseif($_GET['call']=='metodo_get_estado'){
         $params = array('Aguascalientes');
         $resultado = $client->call('metodo_get_estado', $params);
     }
-    echo "<pre>";
-    echo htmlspecialchars($resultado);
-    echo "</pre>";
+    if( isset($resultado) ){
+        echo "<pre>";
+        echo htmlspecialchars($resultado);
+        echo "</pre>";
+    }
 ?>

@@ -16,11 +16,18 @@
             return $data;
         }
     }
-    function get_xmlt($file,$name=null){
+    function get_xmlt($file,$name=null,$xpath=null){
         if($name!==null){
             $xslt = new xsltProcessor;
             $xslt->importStyleSheet(DomDocument::load($name));
-            $xslt_data = $xslt->transformToXML(DomDocument::loadXML($file));
+            if($xpath===null){
+                $xslt_data = $xslt->transformToXML(DomDocument::loadXML($file));
+            }else{
+                $string = $xslt->transformToXML(DomDocument::loadXML($file));
+                $string = "<estados>".str_replace('<?xml version="1.0" encoding="UTF-8"?>',"",$string)."</estados>";
+                $xslt_data = new SimpleXMLElement( $string );
+                $xslt_data = $xslt_data->xpath($xpath)[0];
+            }
             return $xslt_data;
         }
     }
@@ -29,7 +36,7 @@
     $metodos = array(
         'get_paises'  => "metodo_get_paises",
         'get_estados' => "metodo_get_estados",
-        'get_estado' => "metodo_get_estado"
+        'get_estado'  => "metodo_get_estado"
     );
     $urn = array(
         'url1'=>"mi_ws1"
@@ -40,10 +47,10 @@
     $server->wsdl->schemaTargetNamespace = $ns;
     // Parametros de entrada
     /*
-     $server->wsdl->addComplexType(  'type_entrada_get_estados', 
-                                     'complexType', 
-                                     'struct', 
-                                     'all', 
+     $server->wsdl->addComplexType(  'type_entrada_get_estados',
+                                     'complexType',
+                                     'struct',
+                                     'all',
                                      '',
                                      array(
                                          'pais'   => array(
@@ -53,10 +60,10 @@
                                      )
                                  );
      // Parametros de Salida
-     $server->wsdl->addComplexType(  'type_salida_get_estados', 
-                                     'complexType', 
-                                     'struct', 
-                                     'all', 
+     $server->wsdl->addComplexType(  'type_salida_get_estados',
+                                     'complexType',
+                                     'struct',
+                                     'all',
                                      '',
                                      array(
                                          'mensaje'   => array(
@@ -66,13 +73,6 @@
                                      )
                                  );
     */
-    //echo "<pre>";
-    //echo htmlspecialchars(metodo_get_paises());
-    //echo "</pre>";
-    //echo "<pre>";
-    //echo htmlspecialchars(metodo_get_estados(metodo_get_paises()));
-    //echo "</pre>";
-    //die();
     $server->register(  
                     $metodos['get_paises'], // nombre del metodo o funcion
                     array(), // Estructura de parámetros de entrada
@@ -109,16 +109,16 @@
                      'Este método recibe el nombre del país del que quiera los estados' // documentation
                     */
                 );
-    $server->register(
-                    "MiFuncion", 
-                    array(
-                          'num1' => 'xsd:integer', 
-                          'num2' => 'xsd:integer'
-                    ),array(
-                          'return' => 'xsd:string'
-                    ),
-                    $ns 
-    );
+    //$server->register(
+        //"MiFuncion",
+        //array(
+        //      'num1' => 'xsd:integer',
+        //      'num2' => 'xsd:integer'
+        //),array(
+        //      'return' => 'xsd:string'
+        //),
+        //$ns
+    //);
     function metodo_get_paises(){
         $url = "xml/paises/";
         $xml     = open_file($url."estados.xml");
@@ -129,25 +129,27 @@
         if($pais!==null){
             $url = "xml/estados/";
             $xml     = open_file($url."estados.xml");
-            $estados = get_xmlt($xml,$url."get_estados.xsl"); 
+            $estados = get_xmlt($xml,$url."get_estados.xsl");
             return $estados;
         }
     }
     function metodo_get_estado($estado=null) {
         if($estado!==null){
-            $url = "xml/estados/";
+            $url     = "xml/estados/";
             $xml     = open_file($url."estados.xml");
-            $estados = get_xmlt($xml,$url."get_all.xsl");
-
-            $url = "xml/codigos postales/"; 
+            $estados = get_xmlt($xml,$url."get_all.xsl",'//*[@id="'.$estado.'"]/file');
+            $url     = "xml/codigos postales/";
             return $estados;
         }
     }
-    function MiFuncion($num1, $num2){
-        $resultadoSuma = $num1 + $num2;
-        $resultado = "El resultado de la suma de " . $num1 . "+" .$num2 . " es: " . $resultadoSuma;	
-        return $resultado;     
-    }
+    //function MiFuncion($num1, $num2){
+        //$resultadoSuma = $num1 + $num2;
+        //$resultado = "El resultado de la suma de " . $num1 . "+" .$num2 . " es: " . $resultadoSuma;
+        //return $resultado;
+    //}
+    //echo metodo_get_estados('mexico');
+    //echo metodo_get_estado("01");
+    //metodo_get_estado('01');
     $HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
     $server->service($HTTP_RAW_POST_DATA);
 ?>
