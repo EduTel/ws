@@ -8,12 +8,12 @@
     -->
     <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes" />
     <xsl:template match="/estados/pais">
-        <estado>
+        <estados>
             <xsl:for-each select="estado">
-                <nombre id="{@id}">
+                <estado id="{@id}">
                     <xsl:value-of select="nombre" />
-                </nombre>
+                </estado>
             </xsl:for-each>
-        </estado>
+        </estados>
     </xsl:template>
 </xsl:stylesheet>
