@@ -1,0 +1,7 @@
+﻿table {
+    display: block;
+}
+table:before {
+    content: counter(contador, upper-alpha) ": ";
+    counter-increment: contador;
+}

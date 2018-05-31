@@ -1,6 +1,4 @@
 <NewDataSet>
-    <!--<?xml-stylesheet type="text/xsl" href="get_estado.xsl"?>-->
-    <?xml-stylesheet href="estados.css" title="Estilo1"?>
     <xsd:schema targetNamespace="NewDataSet" 
         xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
         xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">

@@ -7,10 +7,10 @@
         indent: indenta la salida de la transformación (yes o no).
     -->
     <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes" />
-    <xsl:template match="/select">
-        <xsl:for-each select="/option">
+    <xsl:template match="/">
+        <xsl:for-each select="select/option">
             <municipio id="{@value}">
-                <xsl:value-of select="option"/>
+                <xsl:value-of select="."/>
             </municipio>
         </xsl:for-each>
     </xsl:template>

@@ -1,5 +1,5 @@
+<?xml-stylesheet type="text/xsl" href="get_municipios.xsl"?>
 <select>
-    <?xml-stylesheet type="text/xsl" href="get_municipios.xsl"?>
     <option value="001">Aguascalientes</option>
     <option value="002">Asientos</option>
     <option value="003">Calvillo</option>
