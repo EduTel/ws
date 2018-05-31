@@ -39,9 +39,9 @@
         'get_estado'  => "metodo_get_estado_municipios"
     );
     $urn = array(
-        'url1'=>"mi_ws1"
+        'url1' => "mi_ws1"
     );
-    $ns    = 'urn:'.$urn['url1'];
+    $ns       = 'urn:'.$urn['url1'];
     $endpoint = 'http://127.0.0.1/ws/index.php';
     $server->configureWSDL('Web servicie de Eduardo',$ns);
     $server->wsdl->schemaTargetNamespace = $ns;
@@ -73,7 +73,7 @@
                                      )
                                  );
     */
-    $server->register(  
+    $server->register(
                     $metodos['get_paises'], // nombre del metodo o funcion
                     array(), // Estructura de parámetros de entrada
                     array('return' => 'xsd:string'), // Estructura de parámetros de salida
@@ -85,7 +85,7 @@
                      'Devuelve los nombres de los países disponibles para el método metodo_get_estados' // documentation
                     */
                 );
-    $server->register(  
+    $server->register(
                     $metodos['get_estados'], // nombre del metodo o funcion
                     array('pais'   => 'xsd:string'), // Estructura de parámetros de entrada
                     array('return' => 'xsd:string'), // Estructura de parámetros de salida
@@ -97,7 +97,7 @@
                      'Este método recibe el nombre del país del que quiera los estados' // documentation
                     */
                 );
-    $server->register(  
+    $server->register(
                     $metodos['get_estado'], // nombre del metodo o funcion
                     array('estado'   => 'xsd:string'), // Estructura de parámetros de entrada
                     array('return' => 'xsd:string'), // Estructura de parámetros de salida
@@ -125,9 +125,9 @@
         $paises  = get_xmlt($xml,$url.'get_paises.xsl');
         return $paises;
     }
-    function metodo_get_estados($pais=null) {
+    function metodo_get_estados($pais=null){
         if($pais!==null){
-            $url = "xml/estados/";
+            $url     = "xml/estados/";
             $xml     = open_file($url."estados.xml");
             $estados = get_xmlt($xml,$url."get_estados.xsl");
             return $estados;
@@ -143,7 +143,7 @@
         $xslt_data = new SimpleXMLElement($data);
         return $xslt_data->xpath($xpath)[0];
     }
-    function metodo_get_estado_municipios($estado=null) {
+    function metodo_get_estado_municipios($estado=null){
         if($estado!==null){
             $url1           = "xml/estados/";
             $xml            = open_file($url1."estados.xml");

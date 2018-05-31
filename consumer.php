@@ -7,18 +7,26 @@
     //ELIMINIAMOS CACHE
     ini_set("soap.wsdl_cache_enabled", "0");
     //GENERAMOS EL PARAMETRO DE ESTADO Y MUNICIPIO
-    if($_GET['call']=='metodo_get_paises'){
-        $resultado = $client->call('metodo_get_paises', $params);
-    }elseif($_GET['call']=='metodo_get_estados'){
-        $params = array('mexico');
-        $resultado = $client->call('metodo_get_estados', $params);
-    }elseif($_GET['call']=='metodo_get_estado_municipios'){
-        $params = array('22');
-        $resultado = $client->call('metodo_get_estado_municipios', $params);
-    }
-    if( isset($resultado) ){
-        echo "<pre>";
-        echo htmlspecialchars($resultado);
-        echo "</pre>";
+    if( !empty($_GET) ){
+        echo "=============================".$_GET['call']."=================================";
+        if($_GET['call']=='metodo_get_paises'){
+            $resultado = $client->call('metodo_get_paises', $params);
+        }elseif($_GET['call']=='metodo_get_estados'){
+            $params = array('mexico');
+            $resultado = $client->call('metodo_get_estados', $params);
+        }elseif($_GET['call']=='metodo_get_estado_municipios'){
+            $params = array('22');
+            $resultado = $client->call('metodo_get_estado_municipios', $params);
+        }else{
+            echo "<br>No entro a ninguna función";
+        }
+        echo "<br>=============================Result=================================";
+        if( isset($resultado) ){
+            echo "<pre>";
+            echo htmlspecialchars($resultado);
+            echo "</pre>";
+        }
+    }else{
+        die("No hay metodo get");
     }
 ?>
