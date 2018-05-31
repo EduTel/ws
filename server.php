@@ -36,7 +36,7 @@
     $metodos = array(
         'get_paises'  => "metodo_get_paises",
         'get_estados' => "metodo_get_estados",
-        'get_estado'  => "metodo_get_estado_data"
+        'get_estado'  => "metodo_get_estado_municipios"
     );
     $urn = array(
         'url1'=>"mi_ws1"
@@ -143,12 +143,12 @@
         $xslt_data = new SimpleXMLElement($data);
         return $xslt_data->xpath($xpath)[0];
     }
-    function metodo_get_estado_municipios($estado=null,$tag=null) {
+    function metodo_get_estado_municipios($estado=null) {
         if($estado!==null){
             $url1           = "xml/estados/";
             $xml            = open_file($url1."estados.xml");
             $estados        = get_xmlt($xml,$url1."get_all.xsl",'//*[@id="'.$estado.'"]/file');
-            
+
             $url2           = "xml/municipios/";
             $xml_municipios = open_file($url2.$estados);
             $municipios     = get_xmlt($xml_municipios,$url2."get_municipios.xsl");
@@ -181,9 +181,9 @@
             print_r($tag_value_xml);
             echo "</pre>";
             */
-            print_r($municipios);
-            die();
-            //return $xml_estado;
+            //print_r($municipios);
+            //die();
+            return $municipios;
         }
     }
     //function MiFuncion($num1, $num2){
@@ -192,8 +192,8 @@
         //return $resultado;
     //}
     //echo metodo_get_estados('mexico');
-    echo metodo_get_estado_municipios("22",'c_mnpio');
+    //echo metodo_get_estado_municipios("22",'c_mnpio');
     //metodo_get_estado('01');
-    //$HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
-    //$server->service($HTTP_RAW_POST_DATA);
+    $HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
+    $server->service($HTTP_RAW_POST_DATA);
 ?>

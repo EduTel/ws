@@ -12,9 +12,9 @@
     }elseif($_GET['call']=='metodo_get_estados'){
         $params = array('mexico');
         $resultado = $client->call('metodo_get_estados', $params);
-    }elseif($_GET['call']=='metodo_get_estado'){
-        $params = array('01');
-        $resultado = $client->call('metodo_get_estado', $params);
+    }elseif($_GET['call']=='metodo_get_estado_municipios'){
+        $params = array('22');
+        $resultado = $client->call('metodo_get_estado_municipios', $params);
     }
     if( isset($resultado) ){
         echo "<pre>";
